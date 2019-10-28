@@ -20,10 +20,15 @@ export class Form extends Component {
     </div>
 
     <div className="form-group">
+    <label htmlFor="Hobby">Hobbies:</label>
+    <input type="text" className="form-control" id="hobbies" value={this.state}  placeholder="Enter Hobbies" required/>
+    </div>
+
+    <div className="form-group">
     <label htmlFor="Age">Age:</label>
     <div className="input-group">
     <div className="input-group-prepend">
-      <span className="input-group-text">₦</span>
+      <span className="input-group-text">Yr(s)</span>
     </div>
     <input type="number" className="form-control" id="age" placeholder="Enter Age" required/>
     </div>
