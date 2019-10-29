@@ -12,38 +12,11 @@ const User =(props)=>{
             <td>{ props.users.hobbies }</td>
             <td>{ props.users.dob.substring(0,10) }</td>
             <td>
-            <button style={{cursor:"pointer"}} className="btn btn-danger" onClick={()=>props.deleteExpense()}>Delete</button></td>
+            <button style={{cursor:"pointer"}} className="btn btn-danger">Delete</button></td>
             </tr>
         )
 }
 class userList extends Component{
-    constructor(props){
-        super(props);
-
-        this.state={
-            users:[]
-        }
-    }
-      //delete todo
-  deleteUser =(id)=>{
-    this.setState({
-      users: [...this.state.users.filter(user =>
-        user.id !== id)]
-    })
-  }
-  addUser=(user)=>{ 
-    let id = this.state.users.length + 1;
-    const newUser={
-      id,
-      firstName:'',
-      lastName:'',
-      hobbies:'',
-      age:'',
-      gender:'',
-      dob:new Date()
-    }
-    this.setState({users:[...this.state.users, newUser]});
-}
     render(){
     return (
         <React.Fragment>
@@ -71,5 +44,4 @@ class userList extends Component{
     )
     }
 }
-
 export default userList;
