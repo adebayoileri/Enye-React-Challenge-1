@@ -8,6 +8,7 @@ export class Form extends Component {
   constructor(props){
     super(props)
     this.state={
+      id:'',
       firstName:'',
       lastName:'',
       hobbies:'',
@@ -29,7 +30,9 @@ export class Form extends Component {
   }
     onSubmit=(e)=>{
       e.preventDefault();
+      let id = this.state.users.length + 1;
         const user={
+          id,
           firstName: this.state.firstName,
           lastName: this.state.lastName,
           hobbies:this.state.hobbies,
@@ -38,6 +41,7 @@ export class Form extends Component {
           dob:this.state.dob
         }
         console.log(user)
+        console.log(this.setState({users:[...this.state.users, user]}));
     }
     render() {
         return (
