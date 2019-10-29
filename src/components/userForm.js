@@ -30,9 +30,7 @@ export class Form extends Component {
   }
     onSubmit=(e)=>{
       e.preventDefault();
-      let id = this.state.users.length + 1;
         const user={
-          id,
           firstName: this.state.firstName,
           lastName: this.state.lastName,
           hobbies:this.state.hobbies,
@@ -40,8 +38,7 @@ export class Form extends Component {
           gender:this.state.gender,
           dob:this.state.dob
         }
-        console.log(user)
-        console.log(this.setState({users:[...this.state.users, user]}));
+        console.log(user);
     }
     render() {
         return (

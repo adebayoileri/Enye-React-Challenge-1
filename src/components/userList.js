@@ -62,6 +62,7 @@ class userList extends Component{
                     </tr>
             </thead>
                 <tbody>
+                {User}
                 </tbody>
             </table>
             <Link to="/"><button type="button" className="btn btn-dark">Create new user +</button></Link>

@@ -1,7 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import '../../App.css';
+=======
+>>>>>>> parent of 7880380... Added Navbar Component
 
 export default function Navbar() {
     return (
